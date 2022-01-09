@@ -18,7 +18,7 @@ export function BasicLayout({ children }) {
         title={'title'}
         section={true}
       />
-      <main className="max-w-5xl mx-auto relative z-20 pt-10 xl:max-w-none">
+      <main className="max-w-5xl mx-auto relative z-20 xl:max-w-none">
         {children}
       </main>
       <Footer />
