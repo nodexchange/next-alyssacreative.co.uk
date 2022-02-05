@@ -20,7 +20,7 @@ export const Footer = ({ children, previous, next }) => {
     </a>
     <div className="pt-10 pb-28 border-t border-gray-200 sm:flex justify-between text-gray-500 dark:border-gray-200/5">
         <div className="mb-6 sm:mb-0 sm:flex">
-          <p>Copyright &copy; 2021 Tailwind Labs Inc.</p>
+          <p>COPYRIGHT © 2022 AS CREATIVE</p>
           <p className="sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-200 dark:sm:border-gray-200/5">
             <Link href="/brand">
               <a className="hover:text-gray-900 dark:hover:text-gray-400">Trademark Policy</a>
