@@ -11,11 +11,12 @@ export const About = (props) => {
               height="192"
               alt="Beautiful abstract building in the sun"
             />
-          </div>
-          <div className="p-6 2xl:p-8 space-y-2">
             <div className="font-medium text-sm leading-6 text-indigo-600">
               ABOUT US
             </div>
+            
+          </div>
+          <div className="p-6 2xl:p-8 space-y-2">
             <a
               href="#"
               className="block font-semibold text-base text-gray-900 leading-6 hover:underline">

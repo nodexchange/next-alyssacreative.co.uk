@@ -7,43 +7,6 @@ import { useEffect, useState } from 'react'
 import clsx from 'clsx'
 // import { ThemeSelect, ThemeToggle } from './ThemeToggle'
 
-function Featured() {
-  return (
-    <Link href="/blog/tailwindcss-v3">
-      <a className="ml-3 text-xs leading-5 font-medium text-sky-600 dark:text-sky-400 bg-sky-400/10 rounded-full py-1 px-3 hidden xl:flex items-center hover:bg-sky-400/20">
-        <strong className="font-semibold">Tailwind CSS v3.0</strong>
-        <svg
-          width="2"
-          height="2"
-          fill="currentColor"
-          aria-hidden="true"
-          className="ml-2 text-sky-600 dark:text-sky-400/70"
-        >
-          <circle cx="1" cy="1" r="1" />
-        </svg>
-        <span className="ml-2">
-          Just-in-Time all the time, colored shadows, scroll snap and more
-        </span>
-        <svg
-          width="3"
-          height="6"
-          className="ml-3 overflow-visible text-sky-300 dark:text-sky-400"
-          aria-hidden="true"
-        >
-          <path
-            d="M0 0L3 3L0 6"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
-      </a>
-    </Link>
-  )
-}
-
 export function NavPopover({ display = 'md:hidden', className, ...props }) {
   let [isOpen, setIsOpen] = useState(false)
 
@@ -168,7 +131,7 @@ export function Header({ hasNav = false, navIsOpen, onNavToggle, title, section 
           <picture>
             {/* <source srcSet={require('@/img/beams/docs@30.avif').default} type="image/avif" /> */}
             <Image
-              src="/vercel.svg"
+              src="/logo-1.jpeg"
               alt=""
               className="w-[71.75rem] flex-none max-w-none dark:hidden"
               width={72} height={16}
@@ -177,7 +140,7 @@ export function Header({ hasNav = false, navIsOpen, onNavToggle, title, section 
           <picture>
             {/* <source srcSet={require('@/img/beams/docs-dark@30.avif').default} type="image/avif" /> */}
             <Image
-              src="/vercel.svg"
+              src="/logo-1.jpeg"
               alt=""
               className="w-[90rem] flex-none max-w-none hidden dark:block"
               width={72} height={16}
@@ -187,7 +150,7 @@ export function Header({ hasNav = false, navIsOpen, onNavToggle, title, section 
       </div>
       <div
         className={clsx(
-          'sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-gray-900/10 dark:border-gray-50/[0.06]',
+          'sticky top-0 z-40 w-full backdrop-blur flex-none transition-all duration-500 lg:z-50 lg:border-b lg:border-gray-900/10 dark:border-gray-50/[0.06]',
           isOpaque
             ? 'bg-white supports-backdrop-blur:bg-white/95 dark:bg-gray-900/75'
             : 'bg-white/95 supports-backdrop-blur:bg-white/60 dark:bg-transparent'
@@ -196,8 +159,9 @@ export function Header({ hasNav = false, navIsOpen, onNavToggle, title, section 
         <div className="max-w-8xl mx-auto">
           <div
             className={clsx(
-              'py-4 border-b border-gray-900/10 lg:px-8 lg:border-0 dark:border-gray-300/10',
-              hasNav ? 'mx-4 lg:mx-0' : 'px-4'
+              'transition-all duration-500 border-b border-gray-900/10 lg:px-8 lg:border-0 dark:border-gray-300/10',
+              hasNav ? 'mx-4 lg:mx-0' : 'px-4',
+              isOpaque ? 'py-0' : 'py-4'
             )}
           >
             <div className="relative flex items-center">
@@ -209,12 +173,10 @@ export function Header({ hasNav = false, navIsOpen, onNavToggle, title, section 
                     Router.push('/brand')
                   }}
                 >
-                  <span className="sr-only">Tailwind CSS home page</span>
+                  <span className="sr-only">Alyssa Salazar creatives</span>
                   <Logo className="w-auto h-5" />
                 </a>
               </Link>
-              {/* <VersionSwitcher /> */}
-              <Featured />
               <div className="relative hidden lg:flex items-center ml-auto">
                 <nav className="text-sm leading-6 font-semibold text-gray-700 dark:text-gray-200">
                   <ul className="flex space-x-8">
@@ -227,7 +189,7 @@ export function Header({ hasNav = false, navIsOpen, onNavToggle, title, section 
                     href="https://github.com/tailwindlabs/tailwindcss"
                     className="ml-6 block text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
                   >
-                    <span className="sr-only">Tailwind CSS on GitHub</span>
+                    <span className="sr-only">AS Creative on social</span>
                     <svg
                       viewBox="0 0 16 16"
                       className="w-5 h-5"
@@ -239,22 +201,6 @@ export function Header({ hasNav = false, navIsOpen, onNavToggle, title, section 
                   </a>
                 </div>
               </div>
-              {/* <SearchButton className="ml-auto text-gray-500 w-8 h-8 -my-1 flex items-center justify-center hover:text-gray-600 lg:hidden dark:text-gray-400 dark:hover:text-gray-300">
-                <span className="sr-only">Search</span>
-                <svg
-                  width="24"
-                  height="24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  aria-hidden="true"
-                >
-                  <path d="m19 19-3.5-3.5" />
-                  <circle cx="11" cy="11" r="6" />
-                </svg>
-              </SearchButton> */}
               <NavPopover className="flex items-center ml-auto" display="lg:hidden" />
             </div>
           </div>
