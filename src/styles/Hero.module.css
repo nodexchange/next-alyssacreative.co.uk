@@ -14,3 +14,32 @@
 103.71deg
 ,#5d2f7d -38.68%,#301643 16.22%,#301643 80.52%,#4b2764 121.02%);
 }
+
+
+.decor:after {
+  background-size: contain;
+  opacity: 1;
+}
+.decor:after {
+  content: '';
+  background: url(https://www.eventige.com/hubfs/decor-hero.png) 50% 100% no-repeat;
+  position: absolute;
+  background-size: 100% auto;
+  top: 20%;
+  left: 50%;
+  width: 100vw;
+  height: 100%;
+  max-width: 2010px;
+  transform: translate(-50%,0) rotate(
+1deg
+);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 1;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

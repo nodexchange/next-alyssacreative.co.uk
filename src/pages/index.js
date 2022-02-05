@@ -7,7 +7,7 @@ import { About } from '../components/About';
 export default function Home() {
   return (
     <div>
-      <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
+      <div className="relative mx-auto pt-20 sm:pt-24 lg:pt-32">
         <Hero />
         <About />
       </div>
