@@ -82,23 +82,31 @@ export function NavPopover({ display = 'md:hidden', className, ...props }) {
     </div>
   )
 }
-
+/*
+HOME ABOUT US SERVICES
+DIGITAL MARKETING
+ 
+WEBSITE MANAGEMENT
+ 
+DIGITAL & GRAPHIC DESIGN
+ CLIENTS CONTACT US
+*/
 export function NavItems() {
   return (
     <>
       <li>
-        <Link href="/docs/installation">
-          <a className="hover:text-sky-500 dark:hover:text-sky-400">Docs</a>
+        <Link href="/about">
+          <a className="hover:text-sky-500 dark:hover:text-sky-400">About us</a>
         </Link>
       </li>
       <li>
-        <a href="https://tailwindui.com" className="hover:text-sky-500 dark:hover:text-sky-400">
-          Components
-        </a>
+        <Link href="/services">
+          <a className="hover:text-sky-500 dark:hover:text-sky-400">Services</a>
+        </Link>
       </li>
       <li>
-        <Link href="/blog">
-          <a className="hover:text-sky-500 dark:hover:text-sky-400">Blog</a>
+        <Link href="/docs/installation">
+          <a className="hover:text-sky-500 dark:hover:text-sky-400">Contact us</a>
         </Link>
       </li>
     </>
@@ -161,7 +169,7 @@ export function Header({ hasNav = false, navIsOpen, onNavToggle, title, section 
             className={clsx(
               'transition-all duration-500 border-b border-gray-900/10 lg:px-8 lg:border-0 dark:border-gray-300/10',
               hasNav ? 'mx-4 lg:mx-0' : 'px-4',
-              isOpaque ? 'py-0' : 'py-4'
+              isOpaque ? 'py-0' : 'py-2'
             )}
           >
             <div className="relative flex items-center">

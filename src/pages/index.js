@@ -60,7 +60,7 @@ function RightContent() {
 function Cards() {
   const cards = [];
   for (let i = 0; i < 4; i++) {
-    cards.push(<Card />);
+    cards.push(<Card key={`card-${i}`} />);
   }
   return cards;
 }

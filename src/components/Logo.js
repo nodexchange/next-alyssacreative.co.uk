@@ -7,7 +7,7 @@ export function Logo({ className, ...props }) {
               src="/logo-1.jpeg"
               alt=""
               className="w-[90rem] flex-none max-w-none hidden dark:block"
-              width={72} height={72}
+              width={62} height={62}
             />
   )
 }
