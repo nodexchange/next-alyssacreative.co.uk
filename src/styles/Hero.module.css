@@ -38,6 +38,36 @@
   opacity: 1;
 }
 
+.down {
+  position: absolute;
+  z-index: -1;
+  top: -20px;
+  left: 50%;
+  bottom: 0;
+  overflow: hidden;
+  width: 9999px;
+  transform: translateX(-50%) rotate(
+1deg
+);
+  border-radius: 0 0 100%/50%;
+  background: #301643 
+}
+
+.up {
+  position: absolute;
+  z-index: -1;
+  top: -20px;
+  left: 50%;
+  bottom: 0;
+  overflow: hidden;
+  width: 9999px;
+  transform: translateX(-50%) rotate(
+-1deg
+);
+  border-radius: 0 0 100%/50%;
+  background: #301643 
+}
+
 .wrapper {
   display: flex;
   align-items: center;

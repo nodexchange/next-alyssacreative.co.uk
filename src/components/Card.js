@@ -1,28 +1,22 @@
 import React from 'react';
 
-export const Card = () => {
+export const Card = ({title, description}) => {
   return (
     <div className="flex-1 flex justify-center">
-      <div className="rounded-lg shadow-lg bg-white max-w-xs">
+      <div className="transition-shadow duration-500 shadow-xl bg-white max-w-xs hover:shadow-md">
         <a href="#!">
           <img
-            className="rounded-t-lg"
+            className=""
             src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
             alt=""
           />
+          <div className="p-4">
+            <h5 className="border-b-2 pb-2 text-center text-gray-900 text-xl font-medium mb-2">
+              {title}
+            </h5>
+            <p className="text-gray-700 text-base mb-2">{description}</p>
+          </div>
         </a>
-        <div className="p-4">
-          <h5 className="text-gray-900 text-xl font-medium mb-2">Card title</h5>
-          <p className="text-gray-700 text-base mb-4">
-            Some quick example text to build on the card title and make up the
-            bulk of the cards content.
-          </p>
-          <button
-            type="button"
-            className=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
-            Button
-          </button>
-        </div>
       </div>
     </div>
   );

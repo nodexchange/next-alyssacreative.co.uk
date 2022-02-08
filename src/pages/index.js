@@ -3,6 +3,9 @@ import Posts from '../components/Posts';
 import styles from '../styles/Home.module.css';
 import { Footer } from '../components/Footer';
 import { Hero } from '../components/Hero';
+import { Carousel } from '../components/Carousel';
+import { Slider } from '../components/Slider';
+import { Section } from '../components/Section';
 import { Card } from '../components/Card';
 import { Contact } from '../components/Contact';
 import { About } from '../components/About';
@@ -57,10 +60,26 @@ function RightContent() {
 //   )
 // }
 
+const services = [
+  {title: 'Digital Marketing', description: 'Blogging, E-newsletters, Social Media Management, Brand Management, Audience Growth, Copywriting, Marketing Strategy'},
+  {title: 'Website Management', description: 'Search Engine Optimisation (SEO), fresh content and support your website’s promotion through digital marketing'},
+  {title: 'Graphic Design', description: 'Logo Design, Branding, Web Design, Photography, Brochure, Flyers, and Guide Design'},
+  {title: 'Brand Development', description: 'Blogging, E-newsletters, Social Media Management, Brand Management, Audience Growth, Copywriting, Marketing Strategy'},
+]
+
+const servicesTitle = 'SERVICES FOR YOU';
+
+const images = [
+  "https://images.unsplash.com/photo-1516655855035-d5215bcb5604?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=60",
+  "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=60",
+  "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=60",
+  "https://images.unsplash.com/photo-1458668383970-8ddd3927deed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=60"
+];
+
 function Cards() {
   const cards = [];
   for (let i = 0; i < 4; i++) {
-    cards.push(<Card key={`card-${i}`} />);
+    cards.push(<Card key={`card-${i}`} title={services[i].title} description={services[i].description} />);
   }
   return cards;
 }
@@ -69,56 +88,30 @@ export default function Home() {
   return (
     <div>
       <div className="relative mx-auto pt-20 sm:pt-24 lg:pt-32">
+        <main>
         <Hero LeftContent={LeftContent()} RightContent={RightContent()} />
         <TwoColumns left={LeftContent()} right={RightContent()} />
         <FullWidth>
+          <h2 className="text-xl">{servicesTitle}</h2>
+        </FullWidth>
+        <FullWidth>
           {Cards()}
         </FullWidth>
+        <Section left={LeftContent()} right={RightContent()} direction="down" />
         <About />
+        <Carousel />
+        <Slider
+          slides={images}
+          size="medium"
+          slideInterval={6}
+          inContainer
+          className="mt-20 mb-20"
+        />
+        <Slider slides={images} size="large" slideInterval={6} />
         <FullWidth>
           <Contact />
         </FullWidth>
-      </div>
-      <div className={styles.container}>
-        <main className={styles.main}>
-          <h1 className={styles.title}>
-            Welcome to <a href="https://nextjs.org">Next.js!</a>
-          </h1>
-          <h2 className="text-3xl font-bold underline">Hello world!</h2>
-          <Posts />
-
-          <p className={styles.description}>
-            Get started by editing{' '}
-            <code className={styles.code}>pages/index.js</code>
-          </p>
-
-          <div className={styles.grid}>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-
-            <a href="https://nextjs.org/learn" className={styles.card}>
-              <h2>Learn &rarr;</h2>
-              <p>Learn about Next.js in an interactive course with quizzes!</p>
-            </a>
-
-            <a
-              href="https://github.com/vercel/next.js/tree/master/examples"
-              className={styles.card}>
-              <h2>Examples &rarr;</h2>
-              <p>Discover and deploy boilerplate example Next.js projects.</p>
-            </a>
-
-            <a
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              className={styles.card}>
-              <h2>Deploy &rarr;</h2>
-              <p>
-                Instantly deploy your Next.js site to a public URL with Vercel.
-              </p>
-            </a>
-          </div>
+        <Section left={LeftContent()} right={RightContent()} direction="up" />
         </main>
       </div>
     </div>
