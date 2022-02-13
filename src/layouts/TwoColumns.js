@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TwoColumns = ({left, right}) => {
+export const TwoColumns = ({left, right}) => {
   return (
     <div className="pb-10 px-8 sm:px-6 md:px-8">
       <div className="flex -mx-2">
@@ -13,5 +13,3 @@ const TwoColumns = ({left, right}) => {
       </div>
     </div>);
 };
-
-export default TwoColumns;

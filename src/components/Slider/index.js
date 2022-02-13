@@ -159,7 +159,6 @@ export const Slider = ({
   }, [transition]);
 
   const Element = inContainer ? Container : "div";
-
   return (
     <Element
       ref={containerRef}

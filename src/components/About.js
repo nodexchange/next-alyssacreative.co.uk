@@ -1,10 +1,12 @@
+import Image from 'next/image';
+
 export const About = (props) => {
   return (
     <div className="flex items-center justify-center">
       <div className="bg-white overflow-hidden sm:max-w-2xl">
         <div className="flex flex-col sm:flex-row">
           <div className="sm:shrink-0">
-            <img
+            <Image
               className="w-full sm:w-[193px] h-[200px] object-cover object-bottom sm:object-center"
               src="https://images.unsplash.com/photo-1637734433731-621aca1c8cb6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=404&q=80"
               width="202"

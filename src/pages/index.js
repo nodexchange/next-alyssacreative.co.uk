@@ -1,7 +1,5 @@
 import Image from 'next/image';
 import Posts from '../components/Posts';
-import styles from '../styles/Home.module.css';
-import { Footer } from '../components/Footer';
 import { Hero } from '../components/Hero';
 import { Carousel } from '../components/Carousel';
 import { Slider } from '../components/Slider';
@@ -9,8 +7,8 @@ import { Section } from '../components/Section';
 import { Card } from '../components/Card';
 import { Contact } from '../components/Contact';
 import { About } from '../components/About';
-import TwoColumns from '@/layouts/twoColumns';
-import FullWidth from '@/layouts/FullWidth';
+import { TwoColumns } from '@/layouts/twoColumns';
+import { FullWidth } from '@/layouts/FullWidth';
 
 
 
@@ -89,16 +87,35 @@ export default function Home() {
     <div>
       <div className="relative mx-auto pt-20 sm:pt-24 lg:pt-32">
         <main>
-        <Hero LeftContent={LeftContent()} RightContent={RightContent()} />
-        <TwoColumns left={LeftContent()} right={RightContent()} />
-        <FullWidth>
-          <h2 className="text-xl">{servicesTitle}</h2>
-        </FullWidth>
-        <FullWidth>
-          {Cards()}
-        </FullWidth>
-        <Section left={LeftContent()} right={RightContent()} direction="down" />
-        <About />
+          {/* <Hero LeftContent={LeftContent()} RightContent={RightContent()} />
+          <TwoColumns left={LeftContent()} right={RightContent()} />
+          <FullWidth>
+            <h2 className="text-xl">{servicesTitle}</h2>
+          </FullWidth>
+          <FullWidth>
+            {Cards()}
+          </FullWidth>
+          <Section left={LeftContent()} right={RightContent()} direction="down" />
+          <About /> */}
+          {/* <Carousel /> */}
+          <Slider
+            slides={images}
+            size="medium"
+            slideInterval={6}
+            inContainer
+            className="mt-20 mb-20"
+          />
+          {/* <FullWidth>
+            <Contact />
+          </FullWidth>
+          <Section left={LeftContent()} right={RightContent()} direction="up" /> */}
+        </main>
+      </div>
+    </div>
+  );
+}
+
+/*
         <Carousel />
         <Slider
           slides={images}
@@ -108,12 +125,5 @@ export default function Home() {
           className="mt-20 mb-20"
         />
         <Slider slides={images} size="large" slideInterval={6} />
-        <FullWidth>
-          <Contact />
-        </FullWidth>
-        <Section left={LeftContent()} right={RightContent()} direction="up" />
-        </main>
-      </div>
-    </div>
-  );
-}
+        
+*/

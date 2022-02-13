@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export const Carousel = () => {
   return (
@@ -28,24 +29,30 @@ export const Carousel = () => {
         </div>
         <div className="carousel-inner relative w-full overflow-hidden">
           <div className="carousel-item active float-left w-full">
-            <img
+            <Image
               src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp"
               className="block w-full"
               alt="Wild Landscape"
+              width="632"
+              height="279"
             />
           </div>
           <div className="carousel-item float-left w-full">
-            <img
+            <Image
               src="https://mdbcdn.b-cdn.net/img/new/slides/042.webp"
               className="block w-full"
               alt="Camera"
+              width="632"
+              height="279"
             />
           </div>
           <div className="carousel-item float-left w-full">
-            <img
+            <Image
               src="https://mdbcdn.b-cdn.net/img/new/slides/043.webp"
               className="block w-full"
               alt="Exotic Fruits"
+              width="632"
+              height="279"
             />
           </div>
         </div>

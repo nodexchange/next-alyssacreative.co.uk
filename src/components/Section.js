@@ -1,6 +1,6 @@
 import styles from '../styles/Hero.module.css';
 // import { motion, useTransform, useViewportScroll } from 'framer-motion';
-import TwoColumns from '@/layouts/twoColumns';
+import { TwoColumns } from '@/layouts/twoColumns';
 
 
 export const Section = ({ LeftContent, RightContent, direction }) => {
