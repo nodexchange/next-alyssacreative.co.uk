@@ -1,5 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/globals.css'
-
 import { BasicLayout } from '../layouts/Basic'
 
 import { createGlobalStyle, ThemeProvider } from 'styled-components'

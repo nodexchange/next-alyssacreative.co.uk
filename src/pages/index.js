@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import Posts from '../components/Posts';
+// import Posts from '../components/Posts';
 import { Hero } from '../components/Hero';
-import { Carousel } from '../components/Carousel';
 import { Slider } from '../components/Slider';
 import { Section } from '../components/Section';
 import { Card } from '../components/Card';
@@ -9,7 +8,6 @@ import { Contact } from '../components/Contact';
 import { About } from '../components/About';
 import { TwoColumns } from '@/layouts/twoColumns';
 import { FullWidth } from '@/layouts/FullWidth';
-
 
 
 function LeftContent() {
@@ -83,12 +81,13 @@ function Cards() {
 }
 
 export default function Home() {
+
   return (
     <div>
       <div className="relative mx-auto pt-20 sm:pt-24 lg:pt-32">
         <main>
-          {/* <Hero LeftContent={LeftContent()} RightContent={RightContent()} />
-          <TwoColumns left={LeftContent()} right={RightContent()} />
+          <Hero LeftContent={LeftContent()} RightContent={RightContent()} />
+          <TwoColumns title={'Traditional & Digital Marketing'} left={LeftContent()} right={LeftContent()} textClass="text-black" />
           <FullWidth>
             <h2 className="text-xl">{servicesTitle}</h2>
           </FullWidth>
@@ -96,34 +95,16 @@ export default function Home() {
             {Cards()}
           </FullWidth>
           <Section left={LeftContent()} right={RightContent()} direction="down" />
-          <About /> */}
-          {/* <Carousel /> */}
+          <About />
           <Slider
             slides={images}
-            size="medium"
-            slideInterval={6}
-            inContainer
-            className="mt-20 mb-20"
           />
-          {/* <FullWidth>
+          <FullWidth>
             <Contact />
           </FullWidth>
-          <Section left={LeftContent()} right={RightContent()} direction="up" /> */}
+          <Section left={LeftContent()} right={RightContent()} direction="up" />
         </main>
       </div>
     </div>
   );
 }
-
-/*
-        <Carousel />
-        <Slider
-          slides={images}
-          size="medium"
-          slideInterval={6}
-          inContainer
-          className="mt-20 mb-20"
-        />
-        <Slider slides={images} size="large" slideInterval={6} />
-        
-*/
