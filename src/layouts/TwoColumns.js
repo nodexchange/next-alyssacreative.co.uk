@@ -6,10 +6,10 @@ export const TwoColumns = ({title, left, right, textClass = 'text-white'}) => {
     <div className="pb-10 px-8 sm:px-6 md:px-8">
       {title ? <Label text={title} /> : <></>}
       <div className="flex -mx-2">
-        <div className={`w-1/2 px-20 ${textClass}`}>
+        <div className={`w-2/3 ${textClass}`}>
           {left}
         </div>
-        <div className={`w-1/2 px-20 ${textClass}`}>
+        <div className={`w-1/3 ${textClass}`}>
           {right}
         </div>
       </div>

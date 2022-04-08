@@ -5,7 +5,11 @@ module.exports = {
     "./src/layouts/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        ascreative: '#353954'
+      }
+    },
   },
   plugins: [],
 }

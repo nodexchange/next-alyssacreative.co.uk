@@ -8,22 +8,20 @@ import { Contact } from '../components/Contact';
 import { About } from '../components/About';
 import { TwoColumns } from '@/layouts/twoColumns';
 import { FullWidth } from '@/layouts/FullWidth';
+import { Page } from '@/layouts/Page';
 
 
 function LeftContent() {
   return (
-    <div className="w-2/3">
+    <div className="w-full">
       <h1 className="text-left text-4xl sm:text-5xl lg:text-6xl tracking-tight dark:text-white">
-        Raise your profile
+        Grow Your Business With Us
       </h1>
       <p className="py-8 opacity-80">
-        Welcome to AS Creative, a digital marketing and Design Agency based in
-        Buckinghamshire, UK. We deliver personalised and tailored services to
-        our clients because we know there is no ‘one-size-fits-all’ approach and
-        you are unique.
+        When it comes to marketing and design, we understand it can get confusing and frustrating. Our promise to clients is to communicate in a user-friendly way, creating clarity and transparency in our work, because sometimes we all need a little push in the right direction.
       </p>
       <button className="bg-violet-600 hover:bg-violet-500 text-white font-bold py-2 px-4">
-        Contact US
+        Learn More
       </button>
     </div>
   );
@@ -83,7 +81,7 @@ function Cards() {
 export default function Home() {
 
   return (
-    <div>
+    <Page>
       <div className="relative mx-auto pt-20 sm:pt-24 lg:pt-32">
         <main>
           <Hero LeftContent={LeftContent()} RightContent={RightContent()} />
@@ -105,6 +103,6 @@ export default function Home() {
           <Section left={LeftContent()} right={RightContent()} direction="up" />
         </main>
       </div>
-    </div>
+    </Page>
   );
 }

@@ -1,20 +1,14 @@
 .decor {
   position: absolute;
   z-index: -1;
-  top: -100px;
+  top: -200px;
   left: 50%;
   bottom: 0;
   overflow: hidden;
-  width: 9999px;
-  transform: translateX(-50%) rotate(
--1deg
-);
-  border-radius: 0 0 100%/50%;
-  background: linear-gradient(
-103.71deg
-,#5d2f7d -38.68%,#301643 16.22%,#301643 80.52%,#4b2764 121.02%);
+  width: 100vw;
+  transform: translateX(-50%);
+  background-color: #353954;
 }
-
 
 .decor:after {
   background-size: contain;
