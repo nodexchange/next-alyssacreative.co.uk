@@ -1,14 +1,16 @@
 import Image from 'next/image';
 // import Posts from '../components/Posts';
-import { Hero } from '../components/Hero';
+import { HeroImage } from '@/sections/HeroImage';
+import { Hero } from '@/sections/Hero';
 import { Slider } from '../components/Slider';
 import { Section } from '../components/Section';
 import { Card } from '../components/Card';
-import { Contact } from '../components/Contact';
-import { About } from '../components/About';
+import { Contact } from '@/sections/Contact';
+import { About } from '@/sections/About';
 import { TwoColumns } from '@/layouts/twoColumns';
 import { FullWidth } from '@/layouts/FullWidth';
 import { Page } from '@/layouts/Page';
+import { Container } from '@/layouts/Container';
 
 
 function LeftContent() {
@@ -82,27 +84,28 @@ export default function Home() {
 
   return (
     <Page>
-      <div className="relative mx-auto pt-20 sm:pt-24 lg:pt-32">
         <main>
-          <Hero LeftContent={LeftContent()} RightContent={RightContent()} />
-          <TwoColumns title={'Traditional & Digital Marketing'} left={LeftContent()} right={LeftContent()} textClass="text-black" />
-          <FullWidth>
-            <h2 className="text-xl">{servicesTitle}</h2>
-          </FullWidth>
-          <FullWidth>
-            {Cards()}
-          </FullWidth>
-          <Section left={LeftContent()} right={RightContent()} direction="down" />
-          <About />
-          <Slider
-            slides={images}
-          />
-          <FullWidth>
-            <Contact />
-          </FullWidth>
-          <Section left={LeftContent()} right={RightContent()} direction="up" />
+          <HeroImage />
+          <Container>
+            {/* <Hero LeftContent={LeftContent()} RightContent={RightContent()} /> */}
+            <TwoColumns title={'Traditional & Digital Marketing'} left={LeftContent()} right={LeftContent()} textClass="text-black" />
+            <FullWidth>
+              <h2 className="text-xl">{servicesTitle}</h2>
+            </FullWidth>
+            <FullWidth>
+              {Cards()}
+            </FullWidth>
+            <Section left={LeftContent()} right={RightContent()} direction="down" />
+            <About />
+            <Slider
+              slides={images}
+              />
+            <FullWidth>
+              <Contact />
+            </FullWidth>
+            <Section left={LeftContent()} right={RightContent()} direction="up" />
+          </Container>
         </main>
-      </div>
     </Page>
   );
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
+import styles from '@/styles/Home.module.css';
 import Link from 'next/link';
 import clsx from 'clsx';
-import { Page } from '@/layouts/Page';
+import { Container } from "@/layouts/Container";
 
 export const Footer = ({ children, previous, next }) => {
   return (
@@ -13,7 +13,7 @@ export const Footer = ({ children, previous, next }) => {
         'bg-ascreative text-sm leading-6',
         previous || next ? 'mt-12' : 'mt-16'
       )}>
-      <Page>
+      <Container>
         <div className="pt-10 pb-28 border-t border-gray-200 sm:flex justify-between text-white dark:border-gray-600">
           <div className="mb-6 sm:mb-0 sm:flex">
             <p>COPYRIGHT © 2022 AS CREATIVE</p>
@@ -26,7 +26,7 @@ export const Footer = ({ children, previous, next }) => {
             </p>
           </div>
         </div>
-      </Page>
+      </Container>
     </footer>
   );
 };

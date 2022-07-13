@@ -1,14 +1,7 @@
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
+import { Header } from '@/sections/Header';
+import { Footer } from '@/sections/Footer';
 
 export function BasicLayout({ children }) {
-  // <Header
-  //       hasNav={Boolean(Component.layoutProps?.Layout?.nav)}
-  //       navIsOpen={navIsOpen}
-  //       onNavToggle={(isOpen) => setNavIsOpen(isOpen)}
-  //       title={meta.title}
-  //       section={section}
-  //     />
   return (
     <>
       <Header

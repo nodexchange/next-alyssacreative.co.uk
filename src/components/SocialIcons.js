@@ -1,13 +1,13 @@
 import React from "react";
 
-const SocialIcons = () => {
+export const SocialIcons = () => {
   return (
     <ul className="flex">
       <li>
         <a
           className="button--svg"
           href="https://www.facebook.com/"
-          target="_blank"
+          target="_blank" rel="noreferrer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,7 @@ const SocialIcons = () => {
         <a
           className="button--svg"
           href="https://www.instagram.com/"
-          target="_blank"
+          target="_blank" rel="noreferrer"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -60,5 +60,3 @@ const SocialIcons = () => {
     </ul>
   );
 };
-
-export default SocialIcons;
