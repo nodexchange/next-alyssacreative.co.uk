@@ -36,10 +36,9 @@ export function Header({
   return (
     <>
       <div
-        className={clsx(
-          'sticky top-0 z-40 w-full backdrop-blur flex-none transition-all duration-500 lg:z-50',
-          isOpaque ? 'bg-ascreative' : 'bg-ascreative'
-        )}>
+        className={
+          `fixed top-0 z-50 w-full backdrop-blur flex-none transition-all duration-500 ${isOpaque ? 'bg-white-scroll-nav' : 'bg-white-nav'}`
+        }>
         <Container>
           <div
             className={clsx(
