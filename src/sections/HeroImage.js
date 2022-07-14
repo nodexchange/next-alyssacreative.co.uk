@@ -4,7 +4,7 @@ import styles from '../styles/Hero.module.css';
 
 export const HeroImage = () => {
   return (
-    <section className="hero relative w-full h-[400px]">
+    <section className="hero relative w-full h-[60vh] overflow-hidden">
       <Image
         className="w-full object-cover object-bottom sm:object-center"
         src="/images/hero.jpg"

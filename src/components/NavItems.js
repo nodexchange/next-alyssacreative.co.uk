@@ -1,35 +1,42 @@
 import Link from 'next/link';
 
+const NavLink = ({href, text}) => (
+  <li className='pt-2 h-[24px]'>
+    <Link href={href}>
+      <a className="hover:text-sky-500 dark:hover:text-sky-400">{text}</a>
+    </Link>
+  </li>
+);
+
+const NavConfig = [
+  {
+    href: '/',
+    text: 'HOME',
+  },
+  {
+    href: '/about',
+    text: 'ABOUT US',
+  },
+  {
+    href: '/services',
+    text: 'SERVICES',
+  },
+  {
+    href: '/clients',
+    text: 'CLIENTS',
+  },
+  {
+    href: '/contact',
+    text: 'CONTACT US',
+  }
+]
+
 export function NavItems() {
   return (
     <>
-      <li>
-        <Link href="/">
-          <a className="hover:text-sky-500 dark:hover:text-sky-400">HOME</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/about">
-          <a className="hover:text-sky-500 dark:hover:text-sky-400">ABOUT US</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/services">
-          <a className="hover:text-sky-500 dark:hover:text-sky-400">SERVICES</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/Clients">
-          <a className="hover:text-sky-500 dark:hover:text-sky-400">CLIENTS</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/docs/installation">
-          <a className="hover:text-sky-500 dark:hover:text-sky-400">
-            CONTACT US
-          </a>
-        </Link>
-      </li>
+      {NavConfig.map(({href, text}) => (
+        <NavLink key={`key-${text}`} href={href} text={text} key={text} />
+      ))}
     </>
   );
 }

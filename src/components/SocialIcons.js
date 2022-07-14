@@ -2,8 +2,8 @@ import React from "react";
 
 export const SocialIcons = () => {
   return (
-    <ul className="flex">
-      <li>
+    <ul className="flex h-[40px] ">
+      <li className='h-[40px]'>
         <a
           className="button--svg"
           href="https://www.facebook.com/"
@@ -30,7 +30,7 @@ export const SocialIcons = () => {
           </svg>
         </a>
       </li>
-      <li>
+      <li className='h-[40px]'>
         <a
           className="button--svg"
           href="https://www.instagram.com/"

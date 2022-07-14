@@ -11,6 +11,7 @@ import { TwoColumns } from '@/layouts/twoColumns';
 import { FullWidth } from '@/layouts/FullWidth';
 import { Page } from '@/layouts/Page';
 import { Container } from '@/layouts/Container';
+import { Clients } from '@/sections/Clients';
 
 
 function LeftContent() {
@@ -97,6 +98,7 @@ export default function Home() {
             </FullWidth>
             <Section left={LeftContent()} right={RightContent()} direction="down" />
             <About />
+            <Clients />
             <Slider
               slides={images}
               />

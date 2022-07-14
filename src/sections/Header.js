@@ -50,7 +50,7 @@ export function Header({
               <NavLogo />
               <div className="relative w-full flex items-center justify-center">
                 <nav className="mr-3 w-full text-sm leading-6 font-semibold dark:text-gray-900">
-                  <ul className="justify-between flex space-x-8 w-full text-blue-600">
+                  <ul className="h-[40px] justify-between flex space-x-8 w-full text-blue-600">
                     <NavItems />
                     <SocialIcons />
                   </ul>
