@@ -14,19 +14,19 @@ const NavConfig = [
     text: 'HOME',
   },
   {
-    href: '/about',
+    href: '#about',
     text: 'ABOUT US',
   },
   {
-    href: '/services',
+    href: '#services',
     text: 'SERVICES',
   },
   {
-    href: '/clients',
+    href: '#clients',
     text: 'CLIENTS',
   },
   {
-    href: '/contact',
+    href: '#contact',
     text: 'CONTACT US',
   }
 ]

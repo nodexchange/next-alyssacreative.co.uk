@@ -1,10 +1,9 @@
 import Image from 'next/image';
 // import Posts from '../components/Posts';
+// import { Hero } from '@/sections/Hero';
 import { HeroImage } from '@/sections/HeroImage';
-import { Hero } from '@/sections/Hero';
 import { Slider } from '@/components/Slider';
 import { Section } from '@/components/Section';
-import { Card } from '@/components/Card';
 import { Contact } from '@/sections/Contact';
 import { About } from '@/sections/About';
 import { TwoColumns } from '@/layouts/twoColumns';
@@ -12,6 +11,7 @@ import { FullWidth } from '@/layouts/FullWidth';
 import { Page } from '@/layouts/Page';
 import { Container } from '@/layouts/Container';
 import { Clients } from '@/sections/Clients';
+import { Services } from '@/sections/Services';
 import { Instagram } from '@/sections/Instagram';
 import { Testemonies } from '@/sections/Testemonies';
 import { Button } from '@/components/Button';
@@ -60,31 +60,6 @@ function RightContent() {
 //   )
 // }
 
-const services = [
-  {
-    title: 'Digital Marketing',
-    description:
-      'Blogging, E-newsletters, Social Media Management, Brand Management, Audience Growth, Copywriting, Marketing Strategy',
-  },
-  {
-    title: 'Website Management',
-    description:
-      'Search Engine Optimisation (SEO), fresh content and support your website’s promotion through digital marketing',
-  },
-  {
-    title: 'Graphic Design',
-    description:
-      'Logo Design, Branding, Web Design, Photography, Brochure, Flyers, and Guide Design',
-  },
-  {
-    title: 'Brand Development',
-    description:
-      'Blogging, E-newsletters, Social Media Management, Brand Management, Audience Growth, Copywriting, Marketing Strategy',
-  },
-];
-
-const servicesTitle = 'SERVICES FOR YOU';
-
 const images = [
   'https://images.unsplash.com/photo-1516655855035-d5215bcb5604?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=60',
   'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=60',
@@ -92,19 +67,6 @@ const images = [
   'https://images.unsplash.com/photo-1458668383970-8ddd3927deed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=60',
 ];
 
-function Cards() {
-  const cards = [];
-  for (let i = 0; i < 4; i++) {
-    cards.push(
-      <Card
-        key={`card-${i}`}
-        title={services[i].title}
-        description={services[i].description}
-      />
-    );
-  }
-  return cards;
-}
 
 export default function Home() {
   return (
@@ -118,9 +80,9 @@ export default function Home() {
             right={RightContent()}
             textClass="text-black"
           />
-        <Container bg="bg-light-purple">
-          <Testemonies />
-        </Container>
+          <Container bg="bg-light-purple">
+            <Testemonies />
+          </Container>
         </Container>
         <Container bg="bg-light-purple">
           <Instagram />
@@ -133,16 +95,9 @@ export default function Home() {
         </Container>
         <Container bg="bg-light-purple">
           {/* <Hero LeftContent={LeftContent()} RightContent={RightContent()} /> */}
-          <FullWidth>
-            <h2 className="text-xl">{servicesTitle}</h2>
-          </FullWidth>
-          <FullWidth>
-            <div className='flex gap-x-3'>
-              {Cards()}
-            </div>
-            </FullWidth>
-          </Container>
-          <Container>
+          <Services />
+        </Container>
+        <Container>
           <Section
             left={LeftContent()}
             right={RightContent()}
@@ -152,10 +107,10 @@ export default function Home() {
           <Section left={LeftContent()} right={RightContent()} direction="up" />
         </Container>
         <Container bg="bg-light-purple">
-            <FullWidth>
-              <Contact />
-            </FullWidth>
-          </Container>
+          <FullWidth>
+            <Contact />
+          </FullWidth>
+        </Container>
       </main>
     </Page>
   );

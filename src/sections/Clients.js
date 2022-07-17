@@ -56,17 +56,18 @@ const config = [
 export const Clients = () => {
   console.log(config);
   return (
-    <div className="p-5 h-[30vh]">
+    <div id="clients" className="p-5 h-[30vh] clients">
+      <h2 className="text-center pb-2">Our Clients</h2>
       <Slider {...settings}>
         {config.map((client, i) => (
-          <div key={`${client.name}-${i}`}>
-            <h3>{client.name} HELLO</h3>
+          <div key={`${client.name}-${i}`} className="px-5">
+            <h3 className="text-center pb-2">{client.name}</h3>
             <Image
               width="300px"
               height="200px"
               src={client.img}
               // layout="fill"
-              // objectFit="cover"
+              objectFit="contain"
               // priority={true}
               alt={client.name}
             />

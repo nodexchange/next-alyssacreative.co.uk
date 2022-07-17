@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 export const Instagram = (props) => {
   return (
-    <div className="flex items-center justify-center flex-col">
+    <div id="instagram" className="flex items-center justify-center flex-col">
       <div className="w-full content-center text-center">
         <h1>Our INSTAGRAM:</h1>
       </div>

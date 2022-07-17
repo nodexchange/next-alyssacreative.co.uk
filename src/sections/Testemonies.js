@@ -10,7 +10,7 @@ const settings = {
 
 export const Testemonies = () => {
   return (
-    <div className="p-5">
+    <div id="testimonies" className="p-5">
       <p>What does our customer say about us?</p>
       <Slider {...settings}>
         <div>

@@ -8,6 +8,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
@@ -24,4 +25,27 @@ a {
 .heading-container {
   height: 65vh;
   top: -50px;
+}
+
+.clients div {
+  transition: all .6s ease;
+}
+.clients .slick-slide {
+  transform: scale(1) !important;
+}
+.clients .slick-current {
+  transform: scale(1.4) !important;
+}
+
+#about {
+  scroll-margin-top: 100px;
+}
+#clients {
+  scroll-margin-top: 100px;
+}
+#services {
+  scroll-margin-top: 100px;
+}
+#contact {
+  scroll-margin-top: 100px;
 }
