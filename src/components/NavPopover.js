@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { useRouter } from 'next/router'
 import clsx from "clsx";
 
 export function NavPopover({ display = "md:hidden", className, ...props }) {
+  const router = useRouter()
   let [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -9,11 +11,11 @@ export function NavPopover({ display = "md:hidden", className, ...props }) {
     function handleRouteChange() {
       setIsOpen(false);
     }
-    Router.events.on("routeChangeComplete", handleRouteChange);
+    router.events.on("routeChangeComplete", handleRouteChange);
     return () => {
-      Router.events.off("routeChangeComplete", handleRouteChange);
+      router.events.off("routeChangeComplete", handleRouteChange);
     };
-  }, [isOpen]);
+  }, [isOpen, router]);
 
   return (
     <div className={clsx(className, display)} {...props}>

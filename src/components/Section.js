@@ -8,7 +8,6 @@ export const Section = ({ LeftContent, RightContent, direction }) => {
   // const scale = useTransform(scrollYProgress, [0, 1], [0.2, 2]);
   return (
     <section className="hero relative">
-      <p>Hello</p>
       <TwoColumns left={LeftContent} right={RightContent} />
       <div className={styles[direction]}></div>
     </section>

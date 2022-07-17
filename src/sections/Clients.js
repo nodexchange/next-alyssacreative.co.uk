@@ -1,36 +1,78 @@
-import { useRef } from 'react';
-import { motion, useScroll } from 'framer-motion';
+import Image from 'next/image';
+import Slider from 'react-slick';
+
+const settings = {
+  className: "center",
+  centerMode: true,
+  infinite: true,
+  centerPadding: "60px",
+  slidesToShow: 3,
+  speed: 500
+};
+
+const config = [
+  {
+    'name': 'BachataBox',
+    'url': 'https://bachatabox.com',
+    'img': '/images/logos/Bachata-box.jpeg'
+  },
+  {
+    'name': 'Dryson Technologies',
+    'url': 'https://bachatabox.com',
+    'img': '/images/logos/draysontechnologies.png'
+  },
+  {
+    'name': 'Smittn Knittn',
+    'url': 'https://bachatabox.com',
+    'img': '/images/logos/smittn.jpeg'
+  },
+  {
+    'name': 'Pexava London',
+    'url': 'https://bachatabox.com',
+    'img': '/images/logos/pexavalogo-facebook.png'
+  },
+  {
+    'name': 'Dance Spotlight',
+    'url': 'https://bachatabox.com',
+    'img': '/images/logos/dance-spotlight.png'
+  },
+  {
+    'name': 'Santa Fe Basque Restaurant',
+    'url': 'https://bachatabox.com',
+    'img': '/images/logos/Santa-Fe-basque.png'
+  },
+  {
+    'name': 'Shazazz Jewellery',
+    'url': 'https://bachatabox.com',
+    'img': '/images/logos/Shazazz-Jewellery.png'
+  },
+  {
+    'name': 'Suchef',
+    'url': 'https://bachatabox.com',
+    'img': '/images/logos/Suchef.jpeg'
+  }
+]
 
 export const Clients = () => {
-  const ref = useRef(null);
-  const { scrollXProgress } = useScroll({ container: ref });
-
+  console.log(config);
   return (
-    <>
-      <svg id="progress" width="100" height="100" viewBox="0 0 100 100">
-        <circle className='circle' cx="50" cy="50" r="30" pathLength="1" className="bg" />
-        <motion.circle
-          cx="50"
-          cy="50"
-          r="30"
-          pathLength="1"
-          className="indicator"
-          style={{ pathLength: scrollXProgress }}
-        />
-      </svg>
-      <ul ref={ref}>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </>
+    <div className="p-5 h-[30vh]">
+      <Slider {...settings}>
+        {config.map((client, i) => (
+          <div key={`${client.name}-${i}`}>
+            <h3>{client.name} HELLO</h3>
+            <Image
+              width="300px"
+              height="200px"
+              src={client.img}
+              // layout="fill"
+              // objectFit="cover"
+              // priority={true}
+              alt={client.name}
+            />
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
 };

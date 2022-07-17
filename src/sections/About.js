@@ -13,9 +13,9 @@ export const About = (props) => {
               height="192"
               alt="Beautiful abstract building in the sun"
             />
-            <div className="font-medium text-sm leading-6 text-indigo-600">
+            {/* <div className="font-medium text-sm leading-6 text-indigo-600">
               ABOUT US
-            </div>
+            </div> */}
             
           </div>
           <div className="p-6 2xl:p-8 space-y-2">
