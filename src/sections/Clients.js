@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Slider from 'react-slick';
+import { Heading } from '@/components/Heading';
 
 const settings = {
   className: "center",
@@ -56,8 +57,8 @@ const config = [
 export const Clients = () => {
   console.log(config);
   return (
-    <div id="clients" className="p-5 h-[30vh] clients">
-      <h2 className="text-center pb-2">Our Clients</h2>
+    <section id="clients" className="p-5 h-[30vh] clients">
+      <Heading text="Our Clients" />
       <Slider {...settings}>
         {config.map((client, i) => (
           <div key={`${client.name}-${i}`} className="px-5">
@@ -74,6 +75,6 @@ export const Clients = () => {
           </div>
         ))}
       </Slider>
-    </div>
+    </section>
   );
 };

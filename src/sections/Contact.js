@@ -1,9 +1,10 @@
-import React from 'react';
+import { Heading } from '@/components/Heading';
 import { Button } from '@/components/Button';
 
 export const Contact = () => {
   return (
-    <div id="contact">
+    <section id="contact">
+      <Heading text="Get in touch" />
       <form className="w-full max-w-sm">
         <div className="md:flex md:items-center mb-6">
           <div className="md:w-1/3">
@@ -53,6 +54,6 @@ export const Contact = () => {
           </div>
         </div>
       </form>
-    </div>
+    </section>
   );
 };

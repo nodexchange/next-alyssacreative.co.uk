@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export const About = (props) => {
   return (
-    <div id="about" className="flex items-center justify-center">
+    <section id="about" className="flex items-center justify-center">
       <div className="bg-white overflow-hidden sm:max-w-2xl">
         <div className="flex flex-col sm:flex-row">
           <div className="sm:shrink-0">
@@ -39,6 +39,6 @@ export const About = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

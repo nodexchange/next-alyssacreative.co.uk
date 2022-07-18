@@ -1,4 +1,18 @@
 import Slider from 'react-slick';
+import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs';
+import { Heading } from '@/components/Heading';
+
+const NextArrow = ({ className, style, onClick }) => (
+  <div className={className} style={{ ...style }} onClick={onClick}>
+    <BsArrowRightCircle />
+  </div>
+);
+
+const PrevArrow = ({ className, style, onClick }) => (
+  <div className={className} style={{ ...style }} onClick={onClick}>
+    <BsArrowLeftCircle />
+  </div>
+);
 
 const settings = {
   dots: true,
@@ -6,32 +20,41 @@ const settings = {
   speed: 500,
   slidesToShow: 1,
   slidesToScroll: 1,
+  nextArrow: <NextArrow />,
+  prevArrow: <PrevArrow />,
 };
 
 export const Testemonies = () => {
   return (
-    <div id="testimonies" className="p-5">
-      <p>What does our customer say about us?</p>
-      <Slider {...settings}>
-        <div>
-          <h3>1</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-      </Slider>
-    </div>
+    <section id="testimonies" className="w-full content-center text-center py-2 text-white">
+      <Heading text="What our customers say about us?" />
+      <div>
+        <Slider {...settings}>
+          <div>
+            <h3>Keri</h3>
+            <p>
+              Share stories, questions, and find support with our social
+              community
+            </p>
+          </div>
+          <div>
+            <h3>Feedback</h3>
+            <p>
+              “I have tried every lotion and this is the BEST lotion. It does
+              not make your skin feel oily and it soaks right into your skin.
+              <span className="text-[#1aa59d]">My skin is super soft!”</span>
+            </p>
+          </div>
+          <div>
+            <h3>Feedback</h3>
+            <p>
+              “I have tried every lotion and this is the BEST lotion. It does
+              not make your skin feel oily and it soaks right into your skin.
+              <span className="text-[#1aa59d]">My skin is super soft!”</span>
+            </p>
+          </div>
+        </Slider>
+      </div>
+    </section>
   );
 };

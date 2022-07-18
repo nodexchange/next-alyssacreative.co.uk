@@ -1,5 +1,6 @@
 import { Card } from '@/components/Card';
 import { FullWidth } from '@/layouts/FullWidth';
+import { Heading } from '@/components/Heading';
 
 const servicesTitle = 'SERVICES FOR YOU';
 
@@ -42,13 +43,11 @@ function Cards() {
 
 export const Services = () => {
   return (
-    <div id="services" className=''>
-      <FullWidth>
-        <h2 className="text-xl">{servicesTitle}</h2>
-      </FullWidth>
+    <section id="services" className=''>
+      <Heading text={servicesTitle} />
       <FullWidth>
         <div className="flex gap-x-3">{Cards()}</div>
       </FullWidth>
-    </div>
+    </section>
   );
 };

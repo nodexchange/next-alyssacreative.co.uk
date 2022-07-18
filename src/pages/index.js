@@ -2,7 +2,6 @@ import Image from 'next/image';
 // import Posts from '../components/Posts';
 // import { Hero } from '@/sections/Hero';
 import { HeroImage } from '@/sections/HeroImage';
-import { Slider } from '@/components/Slider';
 import { Section } from '@/components/Section';
 import { Contact } from '@/sections/Contact';
 import { About } from '@/sections/About';
@@ -14,7 +13,9 @@ import { Clients } from '@/sections/Clients';
 import { Services } from '@/sections/Services';
 import { Instagram } from '@/sections/Instagram';
 import { Testemonies } from '@/sections/Testemonies';
+import { Work } from '@/sections/Work';
 import { Button } from '@/components/Button';
+import { Expert } from '@/sections/Expert';
 
 function LeftContent() {
   return (
@@ -60,12 +61,6 @@ function RightContent() {
 //   )
 // }
 
-const images = [
-  'https://images.unsplash.com/photo-1516655855035-d5215bcb5604?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=60',
-  'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=60',
-  'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=60',
-  'https://images.unsplash.com/photo-1458668383970-8ddd3927deed?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1200&q=60',
-];
 
 
 export default function Home() {
@@ -80,9 +75,9 @@ export default function Home() {
             right={RightContent()}
             textClass="text-black"
           />
-          <Container bg="bg-light-purple">
-            <Testemonies />
-          </Container>
+        </Container>
+        <Container bg="bg-ascreative">
+          <Testemonies />
         </Container>
         <Container bg="bg-light-purple">
           <Instagram />
@@ -94,17 +89,13 @@ export default function Home() {
           <Clients />
         </Container>
         <Container bg="bg-light-purple">
-          {/* <Hero LeftContent={LeftContent()} RightContent={RightContent()} /> */}
           <Services />
         </Container>
         <Container>
-          <Section
-            left={LeftContent()}
-            right={RightContent()}
-            direction="down"
-          />
-          <Slider slides={images} />
-          <Section left={LeftContent()} right={RightContent()} direction="up" />
+          <Work />
+        </Container>
+        <Container>
+          <Expert />
         </Container>
         <Container bg="bg-light-purple">
           <FullWidth>

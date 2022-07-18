@@ -35,7 +35,7 @@ export function Header({
 
   return (
     <>
-      <div
+      <header
         className={
           `fixed top-0 z-50 w-full backdrop-blur flex-none transition-all duration-500 ${isOpaque ? 'bg-white-scroll-nav' : 'bg-white-nav'}`
         }>
@@ -109,7 +109,7 @@ export function Header({
             </div>
           )}
         </Container>
-      </div>
+      </header>
     </>
   );
 }
